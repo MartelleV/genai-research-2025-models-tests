@@ -1,4 +1,4 @@
-interface IPayment {
+export interface IPayment {
   id: number;
   orderId: number;
   amount: number;
@@ -7,7 +7,7 @@ interface IPayment {
   method: "credit_card" | "paypal" | "bank_transfer";
 }
 
-class Payment implements IPayment {
+export class Payment implements IPayment {
   constructor(
     public id: number,
     public orderId: number,

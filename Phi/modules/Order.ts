@@ -1,16 +1,12 @@
-interface IItem {
+import { IAddress } from "./Customer";
+import { IInvoice } from "./Invoice";
+
+export interface IItem {
   productId: number;
   quantity: number;
 }
 
-interface IInvoice {
-  id: number;
-  amount: number;
-  date: string;
-  status: "paid" | "unpaid";
-}
-
-interface IOrder {
+export interface IOrder {
   id: number;
   customerId: number;
   customerName: string;
@@ -26,7 +22,7 @@ interface IOrder {
   invoice: IInvoice;
 }
 
-class Order implements IOrder {
+export class Order implements IOrder {
   constructor(
     public id: number,
     public customerId: number,

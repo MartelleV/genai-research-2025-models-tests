@@ -1,4 +1,4 @@
-interface IInvoice {
+export interface IInvoice {
   id: number;
   orderId: number;
   amount: number;
@@ -6,7 +6,7 @@ interface IInvoice {
   status: "issued" | "paid";
 }
 
-class Invoice implements IInvoice {
+export class Invoice implements IInvoice {
   constructor(
     public id: number,
     public orderId: number,

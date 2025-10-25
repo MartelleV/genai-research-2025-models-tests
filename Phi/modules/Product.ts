@@ -1,11 +1,11 @@
-interface IProduct {
+export interface IProduct {
   id: number;
   name: string;
   description: string;
   price: number;
 }
 
-class Product implements IProduct {
+export class Product implements IProduct {
   constructor(
     public id: number,
     public name: string,

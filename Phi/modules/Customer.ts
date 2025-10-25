@@ -1,11 +1,13 @@
-interface IAddress {
+import { IOrder } from "./Order";
+
+export interface IAddress {
   street: string;
   city: string;
   postalCode: string;
   country: string;
 }
 
-interface ICustomer {
+export interface ICustomer {
   uid: string;
   id: number;
   name: string;
@@ -16,7 +18,7 @@ interface ICustomer {
   role: "admin" | "user";
 }
 
-class Customer implements ICustomer {
+export class Customer implements ICustomer {
   constructor(
     public uid: string,
     public id: number,
